@@ -1,4 +1,5 @@
-#Bienvenidos a la evaluacion 2 en GitHub!
+
+from sistema_colegio import Curso, Colegio, Profesor, Alumno
 import os
 
 def limpiar_pantalla():
@@ -22,8 +23,20 @@ def mostrar_menu():
     print("10. Asignar Profesor a Curso")
     print("11. Inscribir Alumno a Curso")
     print("12. Registrar Calificaciones")
-    print("13. Mostrar información completa de los cursos")
+    print("13. Generar reporte")
     print("14. Salir")
 
 colegio = Colegio()
 
+def agrega_curso():
+    codigo = input("Ingrese el código del curso: ")
+    nombre = input("Ingrese el nombre del curso: ")
+
+def agregar_profesor():
+    id = input("Ingrese el id del profesor: ")
+    nombre = input("Ingrese el nombre del profesor: ")
+    especializacion = input("Ingrese la especializacion del profesor: ")
+
+def agregar_alumno():
+    id = input("Ingrese el id del alumno: ")
+    nombre = input("Ingrese el nombre del alumno: ")
