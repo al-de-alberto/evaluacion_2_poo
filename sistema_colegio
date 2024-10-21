@@ -1,0 +1,15 @@
+
+class Colegio:
+    def __init__(self):
+        self.cursos = []
+        self.profesores = []
+        self.alumnos = []
+
+    def agregar_curso(self, curso):
+        self.cursos.append(curso)
+
+    def agregar_profesor(self, profesor):
+        self.profesores.append(profesor)
+    
+    def agregar_alumno(self, alumno):
+        self.alumnos.append(alumno)
