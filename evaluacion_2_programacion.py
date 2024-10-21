@@ -24,3 +24,6 @@ def mostrar_menu():
     print("12. Registrar Calificaciones")
     print("13. Mostrar información completa de los cursos")
     print("14. Salir")
+
+colegio = Colegio()
+
