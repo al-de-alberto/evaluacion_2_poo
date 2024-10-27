@@ -63,10 +63,10 @@ class Colegio:
 
     def inscribir_alumno_a_curso(self, alumno, curso):
         if alumno in self.alumnos and curso in self.cursos:
-            alumno.cursos_inscritos(curso)
-
+            alumno.cursos_inscritos(curso)   
+        
     def informacion_cursos(self):
-        print("\nCursos disponibles")
+        print("\nCursos disponibles:\n")
         for curso in self.cursos:
             profesor_asignado = None
             alumnos_inscritos = None
@@ -80,13 +80,19 @@ class Colegio:
                 if curso.codigo in alumno.cursos_inscritos:
                     alumnos_inscritos.append(alumno.nombre)
 
-            print(f"Código: {curso.codigo}, Nombre: {curso.nombre}, Créditos: {curso.creditos}")
+            print(f"Nombre: {curso.nombre}, Créditos: {curso.creditos}")
             print(f"Profesor Asignado: {profesor_asignado}")
             print(f"Alumnos Inscritos: {', '.join(alumnos_inscritos)}")
             print("-" * 30)
 
-    
-        
+    def notas_segun_alumno(self):
+        pass
+
+    def notas_segun_curso(self, alumno):
+        print("\nReporte de notas:")
+        print(alumno.calificacion)
+
+
 class Curso:
     def __init__(self, codigo: int, nombre: str, descripcion: str, creditos: int):
         self.codigo = codigo
@@ -122,7 +128,7 @@ class Alumno(Persona):
         else:
             print(f"El alumno no está inscrito en el curso {curso.codigo}")
 
-
+    
 
             
 class Profesor(Persona):
