@@ -24,7 +24,9 @@ def mostrar_menu():
     print("11. Inscribir Alumno a Curso")
     print("12. Asignar Calificaciones")
     print("13. Informacion Cursos")
-    print("14. Salir")
+    print("14. Notas Segun Alumno")
+    print("15. Notas Segun Curso")
+    print("16. Salir")
 
 colegio = Colegio()
 
@@ -121,7 +123,6 @@ def asignar_calificacion():
     else:
         print("El alumno o el curso no existen en el colegio")
 
-
 while True:
     mostrar_menu()
     opcion = input("\nSeleccione una opción: ")
@@ -182,10 +183,17 @@ while True:
         pausa()
 
     elif opcion == "14":
+        colegio.notas_segun_alumno()
+        pausa()
+
+    elif opcion == "15":
+        colegio.notas_segun_curso()
+        pausa()
+
+    elif opcion == "16":
         print("Fin")
         break
 
     else:
         print("Opción no válida, intente de nuevo.")
         pausa()
- 
